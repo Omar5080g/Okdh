@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRAND - Store Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css" />
+  
+  <style>
+  :root { 
+    --deep-teal: #09282E; 
+    --lime-accent: #86DF0E; 
+    --charcoal: #292D32; 
+    --slate-gray: #69727B; 
+    --off-white: #FFFFFF; 
+    --black: #000; 
+  }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { 
+    font-family: 'Nunito', sans-serif; 
+    background: var(--black); 
+    color: var(--off-white); 
+  }
+  .container { max-width: 1440px; margin: 0 auto; padding: 0 24px; }
+  h2 { 
+    font-size: 51px; 
+    font-weight: 500; 
+    text-align: center; 
+    margin: 60px 0 48px; 
+    color: var(--lime-accent); 
+  }
+  .navbar { 
+    background: rgba(255, 255, 255, 0.95); 
+    height: 80px; 
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+  }
+  .nav-content { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 100%; 
+  }
+  .logo { 
+    font-size: 24px; 
+    font-weight: 800; 
+    color: var(--deep-teal); 
+  }
+  .btn-secondary { 
+    background: var(--deep-teal); 
+    color: var(--lime-accent); 
+    font-size: 15px; 
+    font-weight: 600; 
+    height: 44px; 
+    padding: 0 20px; 
+    border-radius: 9999px; 
+    border: 1px solid var(--lime-accent); 
+    cursor: pointer; 
+  }
+  .products { padding: 60px 0; }
+  .grid-3 { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px; 
+  }
+  .product-card { 
+    background: var(--charcoal); 
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+  }
+  .card-image { height: 350px; }
+  .card-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+  }
+  .card-content { padding: 24px; }
+  .card-content h3 { 
+    color: var(--lime-accent); 
+    font-size: 21px; 
+    margin-bottom: 12px; 
+  }
+  .card-content p { 
+    color: var(--slate-gray); 
+    font-size: 15px; 
+    margin-bottom: 12px; 
+  }
+  .price { 
+    font-size: 21px; 
+    font-weight: 600; 
+    color: var(--off-white); 
+    margin: 12px 0; 
+  }
+  .snipcart-add-item { 
+    background: var(--lime-accent); 
+    color: var(--deep-teal); 
+    font-size: 15px; 
+    font-weight: 600; 
+    width: 100%; 
+    height: 44px; 
+    border: none; 
+    border-radius: 3px; 
+    cursor: pointer; 
+  }
+  .snipcart-add-item:hover { opacity: 0.9; }
+  @media (max-width: 767px) { 
+    .grid-3 { grid-template-columns: 1fr; } 
+    h2 { font-size: 32px; } 
+  }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="logo">BRAND</div>
+      <button class="btn-secondary snipcart-checkout">
+        🛒 <span class="snipcart-total-items">0</span> - <span class="snipcart-total-price">$0.00</span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="products container">
+    <h2>منتجاتنا</h2>
+    <div class="grid-3">
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1521572262884-6329263c8d09?w=800">
+        </div>
+        <div class="card-content">
+          <h3>Basic Tech Tee</h3>
+          <p>Premium cotton, relaxed fit</p>
+          <div class="price">$29.99</div>
+          <button class="snipcart-add-item" 
+            data-item-id="tee-001" 
+            data-item-name="Basic Tech Tee" 
+            data-item-price="29.99" 
+            data-item-image="https://images.unsplash.com/photo-1521572262884-6329263c8d09?w=800" 
+            data-item-url="/">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800">
+        </div>
+        <div class="card-content">
+          <h3>Oversized Hoodie</h3>
+          <p>Heavyweight blend</p>
+          <div class="price">$59.99</div>
+          <button class="snipcart-add-item" 
+            data-item-id="hoodie-001" 
+            data-item-name="Oversized Hoodie" 
+            data-item-price="59.99" 
+            data-item-image="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800" 
+            data-item-url="/">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800">
+        </div>
+        <div class="card-content">
+          <h3>Black Cap</h3>
+          <p>قطن تطريز أمامي</p>
+          <div class="price">$25.00</div>
+          <button class="snipcart-add-item" 
+            data-item-id="cap-001" 
+            data-item-name="Black Cap" 
+            data-item-price="25.00" 
+            data-item-image="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800" 
+            data-item-url="/">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script async src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
+  <div hidden id="snipcart" data-api-key="ZjYxNmU5NTItZDUyMy00Yzk4LThmNzQtOWE3NTU5N2I3ZTQ3NjM3MTQ3MjA4OTI1MzQ0NjI0"></div>
+</body>
+</html>
